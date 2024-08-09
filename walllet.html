@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Донаты</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        .wallet {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Поддержите меня</h1>
+        <p id="intro">Меня зовут Егор. Я буду очень благодарен за любую поддержку.</p>
+        <p id="instructions">Вы можете задонатить мне, используя следующие криптовалютные кошельки:</p>
+        <div class="wallet">
+            <p>Veruscoin: RWfytgKe2TCRx7zWyuRZsMzqbN2wLJSkpq</p>
+        </div>
+        <div class="wallet">
+            <p>Bitcoin: 1NPnpASMRdPrt7dKWjSSmqfdq6aLgzsTaa</p>
+        </div>
+        <div class="wallet">
+            <p>Ethereum: 0x58FFB8B76a1D12a8005A21c372C23504B2931648</p>
+        </div>
+        <button class="button" onclick="translate('ru')">Русский</button>
+        <button class="button" onclick="translate('en')">English</button>
+        <button class="button" onclick="translate('de')">Deutsch</button>
+        <button class="button" onclick="translate('ua')">Українська</button>
+    </div>
+
+    <script>
+        function translate(lang) {
+            const translations = {
+                'ru': {
+                    'title': 'Поддержите меня',
+                    'intro': 'Меня зовут Егор. Я буду очень благодарен за любую поддержку.',
+                    'instructions': 'Вы можете задонатить мне, используя следующие криптовалютные кошельки:'
+                },
+                'en': {
+                    'title': 'Support Me',
+                    'intro': 'My name is Yegor. I would be very grateful for any support.',
+                    'instructions': 'You can donate to me using the following cryptocurrency wallets:'
+                },
+                'de': {
+                    'title': 'Unterstütze mich',
+                    'intro': 'Mein Name ist Yegor. Ich wäre für jede Unterstützung sehr dankbar.',
+                    'instructions': 'Sie können mir mit den folgenden Kryptowährungs-Wallets spenden:'
+                },
+                'ua': {
+                    'title': 'Підтримайте мене',
+                    'intro': 'Мене звати Єгор. Я буду дуже вдячний за будь-яку підтримку.',
+                    'instructions': 'Ви можете пожертвувати мені, використовуючи наступні криптовалютні гаманці:'
+                }
+            };
+
+            document.getElementById('title').textContent = translations[lang]['title'];
+            document.getElementById('intro').textContent = translations[lang]['intro'];
+            document.getElementById('instructions').textContent = translations[lang]['instructions'];
+        }
+    </script>
+</body>
+</html>
